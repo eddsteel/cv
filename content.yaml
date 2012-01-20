@@ -1,0 +1,103 @@
+name: 'Edd Steel'
+url : 'edd.heroku.com/resume'
+
+contact         : 'Contact'
+contact_address : ['#711 - 22 E Cordova St.',
+                   'Vancouver, BC',
+                   'V6A 1K2',
+                   'Canada']
+contact_other   : ['+1-604-345-3132',
+                   'edward.steel@gmail.com',
+                   'edd.heroku.com',
+                   '@eddsteel']
+
+skill      : 'Skills'
+skill_st   : 'By capability or experience'
+skills     : [
+'Java, Ruby, JavaScript, bash, PHP, ML, C# (mono), C.',
+'JUnit, RSpec, Easymock.',
+'HTML, CSS, \LaTeX, RSS, Atom.',
+'HTTP (and RESTful web services), SOAP.',
+'Maven, ANT, Rake.',
+'Oracle, CouchDB, sqlite, Redis.',
+'Perforce, git, svn, hg.',
+'Vim, IntelliJ IDEA, Eclipse.',
+'J2EE, Spring framework, Swing, Sinatra, Rails.',
+'Apache, nginx, Tomcat, WebSphere.',
+'Ubuntu, Arch Linux, Slackware, Windows, gentoo, OS X',
+'English, German, French.',
+'Driving licence with no penalty point']
+
+experience  : 'Experience'
+experiences : [
+  { title:'*Consultant*, *Senior Consultant* _Detica_, Guildford, UK'
+    start:'2007'
+    end  :'2012'
+    litems:[
+      'Core member of _Detica NetReveal product development team, working on a highly configurable J2EE social network analysing fraud detection system (see [deticanetreveal.com](http://deticanetreveal.com)).',
+      'Led team of five to design and develop a graphical (swing) configuration system for a rule-based scoring engine.',
+      'Independently designed and developed enhancements to web-based workflow system to support batch loading, and tight integration with other modules.',
+      'Independently designed and developed Groovy-based auto-routing rules for web-based workflow system.',
+      'Led team of three to bring product into line with legal accessibility requirements',
+      'Interviewed and discussed recruitment of several developers.',
+      'Visited client sites to discuss and assist with integration with client systems.',
+      'Converted product from ad-hoc releases from ANT scripts to continuous integration based on Maven and Hudson (now Jenkins).',
+      'Maintained detailed documentation and provided support to consultants to facilitate customisation and extension.',
+      'Product has received several industry pludits:',
+      [ "2010 'Outstanding' rating, Gartner.",
+        "2010 Fraud Initiative award (RSA Insurance), Insurance Times Awards.",
+        "2010 Chairman's gold award, BAE Systems.",
+        "2009 British Insurance Award for Technology (RBS Insurance)."
+      ]
+    ]
+  },
+  { title:'*Student Developer* _Filogix Inc_., Toronto, Canada'
+    start:'2005'
+    end  :'2006'
+    litems:['Worked on _Filogix Express_, J2EE mortgage origination system.',
+           'Created and maintained build system in ANT ot build, deploy and promote.',
+           'Developed fixes and enhancements from support tickets and functional specifications.'
+    ]
+  },
+  { title:'*Consular Assistant* _British Embassy_, Brussels, Belgium'
+    start:'Summer 2006'
+    litems:['Made passports and other consular documents to high level of accuracy.',
+           'Provided service and assistance to consular applicants and distressed nationals.'
+    ]
+  }
+]
+
+education: 'Education'
+educations: [
+  { title: "*Computer Science BSc. Hons* _University of Warwick_, United Kingdom"
+    date : '2007'
+    litems: ['Achieved First Class Degree with Honours (top 10%).',
+    'Covered object-oriented design, functional programming, imperative algorithms and data structures, java, concurrency, automata, neural networks, compiler design and discrete mathematics.'
+             'Spent one year working in industry (_Filogix Inc_., Toronto).',
+             'Completed final year project and wrote dissertation: A Freehand, Stroke-Approximating Sketching Application for the GNOME Desktop.'
+    ]
+  },
+  { title: "*International Baccalaureate* _Bonn International School_, Germany"
+    date : '2002'
+    litems: ['Achieved Diploma of 43 points (out of possible 45).',
+    'Higher Level subjects: Mathematics, Physics, History, English; Standard Level: Economics, German.',
+    'Grade A Extended Essay in Mathematics: An Analysis of the Sound-Proofing Qualities of the Egg-Box Surface.'
+    ]
+  }
+]
+
+achievement : 'Achievements'
+achievements: [
+    {name: 'Honourable Mention'
+     context: 'IEEE CHC60 Competition'
+     year: '2006'},
+    {name: 'Student Leadership Award',
+     context: 'Bonn International School',
+     year: '2002'},
+    {name: 'Student of the Year',
+     context: 'Bonn International School',
+     year: '2001'}]
+
+interest : 'Interests'
+interests: ['Learning.','Coding. See [github.com/eddsteel](http://github.com/eddsteel).', 'Food.', 'Travel.']
+

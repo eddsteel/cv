@@ -1,0 +1,62 @@
+%!/usr/bin/tex
+% Edd's Résumé.
+%
+
+\documentclass[line,margin]{res}
+
+\begin{document}
+
+\name{\Large <%=name%> \hspace{18.5em} {\footnotesize \tt <%=url%>}}
+
+\begin{resume}
+
+\section{<%=contact%>}
+
+<%0..3.each do |i| %>
+	<%=contact_address[i]%> \hfill
+	{\tt <%=contact_other[i]%>}\\
+<%end%>
+
+
+\section{<%=skill%>\\ {\sl \scriptsize <%=skill_st%>}}
+
+<%skills.each do |skill|%>
+  <%=latex skill %> \\
+<%end%>
+
+
+\section{<%=experience%>}
+<% experiences.each do |experience| %>
+  <%=latex experience.title%> \hfill <%=experience.start%>--<%=experience.end%>\\
+\begin{list}{\labelitemi}{\leftmargin=1em}
+<%experience.litems.each do |item|%>
+\item <%= latex item %>
+<%end%>
+\end{list}
+\pagebreak[2]
+<%end%>
+
+\section{<%=education%>}
+<% educations.each do |education| %>
+<%= latex education.title%> \hfill <%= education.date%>\\
+\begin{list}{\labelitemi}{\leftmargin=1em}
+<% education.litems.each do |item| %>
+\item <%=latex item%>
+<% end %>
+\end{list}
+<% end %>
+
+\section{<%=achievement%>}
+<%achievements.each do |achievement|%>
+  {\bf <%=achievement.name%>} {\sl <%=achievement.context%>} \hfill <%=achievement.year%> \\
+<%end%>
+
+\section{<%=interest%>}
+\begin{list}{\labelitemi}{\leftmargin=1em}
+<%interests.each do |interest| %>
+\item <%=latex item%>
+<%end%>
+\end{list}
+\end{resume}
+\end{document}
+

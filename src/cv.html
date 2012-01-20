@@ -1,0 +1,96 @@
+<!doctype html!>
+<html language="en">
+  <head><title>Edd's Résumé.</title></head>
+  <body>
+    <section class="header">
+      <div class="name">
+        <%=name%>
+      </div>
+      <div class="url">
+        <%=url%>
+      </div>
+    </section>
+    <article class="resume">
+
+      <section id="contact">
+        <h1><%=contact%></h1>
+        <div class="address">
+          <% 0..3.each do |i| %>
+            <%=contact_address[i]%>
+          <%end%>
+        </div>
+        <div class="other">
+          <% 0..3.each do |i| %>
+            <%=contact_other[i]%>
+          <%end%>
+        </div>
+      </section>
+
+      <section id="skill">
+      <h1><%=skill%></h1>
+      <ul>
+        <% skills.each do |skill| %>
+          <li><%=html skill%></li>
+        <% end %>
+      </ul>
+      </section>
+
+      <section id="experience">
+      <h1><%=experience%></h1>
+      <% experiences.each do |experience| %>
+        <hgroup>
+          <h2><%=html experience.title%></h2>
+          <span class="date">
+            <%=experience.start%>&mdash;<%=experience.end%>
+          </span>
+        </hgroup>
+        <ul>
+          <% experience.litems.each do |item| %>
+          <li> <%=html item%></li>
+          <% end %>
+        </ul>
+      <% end %>
+      </section>
+
+      <section id="education">
+        <h1><%=education%></h1>
+        <% educations.each do |education| %>
+          <hgroup>
+            <h2><%= html education.title%></h2>
+            <span class="date">
+               <%= education.date%>
+            </span>
+          </hgroup>
+          <ul>
+            <% education.litems.each do |item| %>
+            <li> <%=html item%> </li>
+            <% end %>
+          </ul>
+        <% end %>
+      </section>
+
+      <section id="achievement">
+        <h1><%=achievement%></h1>
+        <ul>
+        <%achievements.each do |achievement|%>
+          <li><div class="achievement">
+            <span class="name"><%=achievement.name%></span>
+            <span class="context"><%=achievement.context%></span>
+            <span class="date"><%=achievement.year%></span>
+          </div></li>
+        <%end%>
+        </ul>
+      </section>
+
+      <section id="interest">
+        <h1><%=interest%></h1>
+        <ul>
+        <%interests.each do |interest| %>
+          <li> <%=html item%> </li>
+        <%end%>
+        </ul>
+      </section>
+
+    </article>
+  </body>
+</html>
