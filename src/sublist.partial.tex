@@ -1,7 +1,7 @@
 <%# List within a list.%>
 \begin{itemize}
 \renewcommand{\labelitemi}{$\circ$}
-<%items.each do |item|%>
+<%each do |item|%>
 \item <%= latex item %>
 <%end%>
 \end{itemize}

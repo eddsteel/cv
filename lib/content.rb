@@ -24,6 +24,12 @@ class SoftObject
     @data = data
   end
 
+  def each &block
+    @data.each do |k,v|
+      yield k, v
+    end
+  end
+
   def self.accepts? value
     value.respond_to? :"key?"
   end
@@ -40,12 +46,19 @@ class SoftObject
 end
 
 class SoftObjectList
+  include Enumerable
   def initialize data
     @data = data
   end
 
   def self.accepts? value
     value.is_a? Array
+  end
+
+  def each &block
+    @data.each do |d|
+      yield SoftObjectFactory.build(d)
+    end
   end
 
   alias mm method_missing
