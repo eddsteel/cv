@@ -15,13 +15,13 @@
       <section id="contact">
         <h1><%=contact%></h1>
         <div class="address">
-          <% 0..3.each do |i| %>
-            <%=contact_address[i]%>
+          <% (0..3).each do |i| %>
+					<%=contact_address[i]%> <br />
           <%end%>
         </div>
         <div class="other">
-          <% 0..3.each do |i| %>
-            <%=contact_other[i]%>
+          <% (0..3).each do |i| %>
+					<%=contact_other[i]%> <br />
           <%end%>
         </div>
       </section>
