@@ -27,7 +27,7 @@
 
 \section{<%=experience%>}
 <% experiences.each do |experience| %>
-  <%=latex experience.title%> \hfill <%=experience.start%>--<%=experience.end%>\\
+  <%=latex experience.title%> \hfill <%=experience.dstart%>--<%=experience.dend%>\\
 \begin{list}{\labelitemi}{\leftmargin=1em}
 <%experience.litems.each do |item|%>
 \item <%= latex item %>
