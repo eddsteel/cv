@@ -1,12 +1,24 @@
 require 'rake/clean'
 require 'rubygems'
-require 'aws/s3'
+require 'lib/document'
+#require 'aws/s3'
 
 CV = 'cv.tex'
 CV_OUT = CV.ext('.pdf')
 CLEAN << FileList['*.dvi'] + FileList['*.log']
 CLOBBER << CV.ext('pdf')
 BUCKET = 'eddscloud-public'
+
+
+desc 'build source html'
+file 'cv.html' => 'src/cv.html' do
+  puts Document.from_file('src/cv.html').result
+end
+
+desc 'build source tex'
+file CV => "src/#{CV}" do
+  puts Document.from_file("src/#{CV}").result
+end
 
 desc 'Build CV'
 file CV_OUT => CV do
