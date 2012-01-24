@@ -46,6 +46,7 @@ class Document
 
   ##
   # Load helper module and its methods, if it exists.
+  # Otherwise, load generic helpers (partial support).
   #
   private
   def load_helpers
@@ -54,6 +55,8 @@ class Document
     if File.exist? filename
       require @extension
       extend(ObjectSpace.const_get(@extension.capitalize))
+    else
+      extend DocumentHelper
     end
   end
 end
