@@ -7,7 +7,11 @@ content, and similar visual style (through `rake`).
 
 PDF from tex templates capability is specifically supported, but otherwise
 there should be no restriction about what kind of ERB templates you build
-from. Templates go in `src` with the same file name as their output.
+from. Templates go in `src` with the same file name as their output. If you
+want helper methods, put them in a module named after the extension, in a file
+named after the extension. For example, TeX helpers, for `.tex` templates are
+in `Tex` in `tex.rb`. These are dynamically loaded into the context of the
+template.
 
 Nothing outside of the `src` directory is specific to me or résumés.  I'll
 probably use it for other documents as required, you're welcome to do the
