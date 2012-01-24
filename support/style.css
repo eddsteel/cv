@@ -1,0 +1,130 @@
+body {
+	margin: 3em;
+	font-family: 'Times New Roman', 'Times', serif;
+}
+
+section {
+	width: 100%;
+	display: block;
+	clear: both;
+	margin: 2em 0;
+}
+
+a {
+	#229;
+}
+
+a:visited {
+	color: #333;
+}
+
+section>h1, section>h2 {
+	display: block;
+	float: left;
+	clear: left;
+	width: 30%;
+	margin: 0;
+}
+
+section>h1>a:visited, section>h1>a {
+	position: absolute;
+	margin-left: -1em;
+	color: #ddd;
+	text-decoration: none;
+}
+
+section>h1:hover>a:visited, section>h1:hover>a {
+	color: black;
+}
+
+section>h2 {
+	font-weight: normal;
+	font-size: 1em;
+	font-style: italic;
+}
+
+hgroup h2, hgroup span {
+	font-size: 1em;
+	font-style: none;
+	font-weight: normal;
+	display: inline-block;
+	margin: 0;
+}
+
+hr.clearfix {
+	clear: both;
+	border: none;
+}
+
+
+hgroup h2, p.achievement span.description {
+	width: 72%;
+}
+
+hgroup h2 p, div p {
+	margin: 0;
+}
+
+hgroup span, span.date {
+	text-align: right;
+	width: 27%;
+}
+
+p.achievement * {
+	display: inline-block;
+}
+
+ul {
+	padding-left: 20px;
+}
+
+li {
+	margin-left: 0;
+	text-indent: -2px;
+}
+
+div.address { 
+	text-align: left; 
+	width: 50%;
+	display: inline-block;
+	float:left;
+}
+
+div.other {
+	text-align: right; 
+	width: 50%;
+	display: inline-block;
+	float: left;
+}
+
+section>p, section>div, section>ul {
+	margin-left: 30%;
+	display:block;
+}
+
+section.header {
+	border-bottom: 1px solid black;
+	line-height: 2em;
+}
+
+section.header p {
+	margin: 0;
+}
+
+section.header div.name {
+	margin: 0;
+	float: left;
+	font-size: 2em;
+}
+
+
+section.header div.url, div.other {
+	margin: 0;
+	text-align: right;
+	font-family: 'courier', 'monospace';
+}
+
+section>p {
+	margin-top: 0;
+	margin-bottom: 0;
+}

@@ -23,7 +23,7 @@ class Document
     load_helpers
   end
 
-  def self.from_file template_file, file='content.yaml'
+  def self.from_file template_file, file='src/content.yaml'
     self.new template_file, Content.parse(file)
   end
 
@@ -40,7 +40,7 @@ class Document
   end
 
   def result
-    renderer = ERB.new File.read(@template)
+    renderer = ERB.new File.read(@template), nil, '>'
     renderer.result binding
   end
 
