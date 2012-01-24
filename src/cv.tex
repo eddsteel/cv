@@ -2,19 +2,19 @@
 % Edd's Résumé.
 %
 
-\documentclass[line,margin]{res}
+\documentclass[line,margin]{support/res}
 
 \begin{document}
 
-\name{\Large <%=name%> \hspace{18.5em} {\footnotesize \tt <%=url%>}}
+\name{\Large <%=name%> \hspace{18.5em} {\footnotesize \tt <%=latex url%>}}
 
 \begin{resume}
 
 \section{<%=contact%>}
 
 <%(0..3).each do |i| %>
-	<%=contact_address[i]%> \hfill
-	{\tt <%=contact_other[i]%>}\\
+	<%=latex contact_address[i]%> \hfill
+	{\tt <%=latex contact_other[i]%>}\\
 <%end%>
 
 
@@ -30,7 +30,12 @@
   <%=latex experience.title%> \hfill <%=experience.dstart%>--<%=experience.dend%>\\
 \begin{list}{\labelitemi}{\leftmargin=1em}
 <%experience.litems.each do |item|%>
+<% if item.class == String %>
 \item <%= latex item %>
+<% else %>
+<%= latex item %>
+<% end %>
+
 <%end%>
 \end{list}
 \pagebreak[2]
@@ -42,6 +47,7 @@
 \begin{list}{\labelitemi}{\leftmargin=1em}
 <% education.litems.each do |item| %>
 \item <%=latex item%>
+
 <% end %>
 \end{list}
 <% end %>
@@ -54,7 +60,8 @@
 \section{<%=interest%>}
 \begin{list}{\labelitemi}{\leftmargin=1em}
 <%interests.each do |interest| %>
-\item <%=latex item%>
+\item <%=latex interest%>
+
 <%end%>
 \end{list}
 \end{resume}
