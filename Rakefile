@@ -15,6 +15,7 @@ FileList['src/*'].each do |f|
   output = f.pathmap('%f')
   unless f =~ /\.partial\./ || f =~ /.yaml$/
     file f.pathmap('out/%f') => [f, 'out'] do |file|
+      puts "template #{output}"
       File.open file.name, 'w' do |doc|
         doc.write Document.from_file(file.prerequisites[0]).result
       end
