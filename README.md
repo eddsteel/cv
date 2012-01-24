@@ -5,13 +5,16 @@ The actual information is held in a YAML file - `content.yaml`. This is used
 in ERB templates to create documents of various formats with the same text
 content, and similar visual style (through `rake`).
 
-Apart from `content.yaml`, nothing about this is specific to me or résumés.
-I'll probably use it for other documents as required. It supports partials,
-and builds friendly soft objects from YAML maps and lists.
-
 PDF from tex templates capability is specifically supported, but otherwise
 there should be no restriction about what kind of ERB templates you build
 from. Templates go in `src` with the same file name as their output.
+
+Nothing outside of the `src` directory is specific to me or résumés.  I'll
+probably use it for other documents as required, you're welcome to do the
+same. It supports partials, and builds friendly soft objects from YAML maps
+and lists. Build a content object with `Content.parse name_of_yaml_file` and
+all the YAML properties will be available as accessor methods. Array
+properties act as Arrays.
 
 You can see the HTML version of the document
 [here](http://edd.heroku.com/resume), and in PDF
@@ -21,10 +24,10 @@ You can see the HTML version of the document
 
 The project has the following structure:
 
-`lib`: Ruby code for creating backing objects from YAML for ERB templates.
-`support`: CSS files, LaTeX style files, etc.
-`src`: templates, partial templates, content YAML files.
-`out`: intermediate build files. (TODO)
+* `lib`: Ruby code for creating backing objects from YAML for ERB templates.
+* `support`: CSS files, LaTeX style files, etc.
+* `src`: templates, partial templates, content YAML files.
+* `out`: intermediate build files. (TODO)
 
 # Rake targets
 
