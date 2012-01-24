@@ -118,6 +118,11 @@ section.header div.name {
 	font-size: 2em;
 }
 
+section.header div.name a {
+	color: black;
+	text-decoration: none;
+}
+
 
 section.header div.url, div.other {
 	margin: 0;
