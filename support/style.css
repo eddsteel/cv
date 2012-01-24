@@ -76,6 +76,7 @@ p.achievement * {
 
 ul {
 	padding-left: 20px;
+	margin-bottom: 2em;
 }
 
 li {
@@ -97,7 +98,7 @@ div.other {
 	float: left;
 }
 
-section>p, section>div, section>ul {
+section>p, section>div, section>ul, section>hgroup{
 	margin-left: 30%;
 	display:block;
 }

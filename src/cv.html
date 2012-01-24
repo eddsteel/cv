@@ -1,59 +1,81 @@
 <!doctype html!>
 <html language="en">
-  <head><title>Edd's Résumé.</title></head>
+	<head>
+		<title>Edd's Résumé.</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="support/style.css"/>
+	</head>
   <body>
     <section class="header">
       <div class="name">
         <%=name%>
       </div>
       <div class="url">
-        <%=url%>
+        <%=html url%>
       </div>
     </section>
     <article class="resume">
 
       <section id="contact">
-        <h1><%=contact%></h1>
-        <div class="address">
-          <% (0..3).each do |i| %>
-					<%=contact_address[i]%> <br />
-          <%end%>
-        </div>
-        <div class="other">
-          <% (0..3).each do |i| %>
-					<%=contact_other[i]%> <br />
-          <%end%>
-        </div>
+				<h1>
+					<a href="#contact">#</a>
+					<%=contact%>
+				</h1>
+				<div>
+					<div class="address">
+						<% (0..3).each do |i| %>
+						<%=html contact_address[i]%>
+						<%end%>
+					</div>
+					<div class="other">
+						<% (0..3).each do |i| %>
+						<%=html contact_other[i]%>
+						<%end%>
+					</div>
+				</div>
       </section>
 
+			<hr class="clearfix" />
+
       <section id="skill">
-      <h1><%=skill%></h1>
-      <ul>
+				<h1>
+					<a href="#skill">#</a>
+					<%=skill%>
+				</h1>
         <% skills.each do |skill| %>
-          <li><%=html skill%></li>
+          <%=html skill%>
         <% end %>
-      </ul>
       </section>
 
       <section id="experience">
-      <h1><%=experience%></h1>
-      <% experiences.each do |experience| %>
-        <hgroup>
-          <h2><%=html experience.title%></h2>
+				<h1>
+					<a href="#experience">#</a>
+					<%=experience%>
+				</h1>
+				<% experiences.each do |experience| %>
+				<hgroup>
+					<h2><%=html experience.title%></h2>
           <span class="date">
             <%=experience.dstart%>&mdash;<%=experience.dend%>
           </span>
         </hgroup>
         <ul>
           <% experience.litems.each do |item| %>
-          <li> <%=html item%></li>
+					<% if item.class == String %>
+          	<li> <%=html item%></li>
+					<% else %>
+						<%=html item%>
+					<% end %>
           <% end %>
         </ul>
-      <% end %>
+				<% end %>
       </section>
 
       <section id="education">
-        <h1><%=education%></h1>
+			<h1>
+				<a href="#education">#</a>
+				<%=education%>
+			</h1>
         <% educations.each do |education| %>
           <hgroup>
             <h2><%= html education.title%></h2>
@@ -70,23 +92,29 @@
       </section>
 
       <section id="achievement">
-        <h1><%=achievement%></h1>
-        <ul>
+			<h1>
+				<a href="#achievement">#</a>
+				<%=achievement%>
+			</h1>
         <%achievements.each do |achievement|%>
-          <li><div class="achievement">
-            <span class="name"><%=achievement.name%></span>
-            <span class="context"><%=achievement.context%></span>
+          <p class="achievement">
+						<span class="description">
+							<strong><%=achievement.name%></strong>
+							<em><%=achievement.context%></em>
+						</span>
             <span class="date"><%=achievement.year%></span>
-          </div></li>
+          </p>
         <%end%>
-        </ul>
       </section>
 
       <section id="interest">
-        <h1><%=interest%></h1>
+			<h1>
+				<a href="#interest">#</a>
+				<%=interest%>
+			</h1>
         <ul>
         <%interests.each do |interest| %>
-          <li> <%=html item%> </li>
+          <li> <%=html interest%> </li>
         <%end%>
         </ul>
       </section>
