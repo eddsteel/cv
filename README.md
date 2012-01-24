@@ -14,8 +14,8 @@ there should be no restriction about what kind of ERB templates you build
 from. Templates go in `src` with the same file name as their output.
 
 You can see the HTML version of the document
-[here](http://edd.heroku.com/resume.html), and in PDF
-[here](http://edd.heroku.com/resume).
+[here](http://edd.heroku.com/resume), and in PDF
+[here](http://edd.heroku.com/resume.pdf).
 
 # Structure
 
@@ -34,6 +34,7 @@ will build the `.tex` file from its template first.
 
 # Prerequisites
 
-The `aws-s3` gem is required, in order to push PDF files to S3 buckets. You
-will need to set `AMAZON_ACCESS_KEY_ID`, `AMAZON_SECRET_ACCESS_KEY`,
-`AMAZON_S3_BUCKET` environment variables to use these targets.
+The `aws-s3` gem is required in order to push PDF files to S3 buckets. If you
+want to use these targets, you will need to set `AMAZON_ACCESS_KEY_ID`,
+`AMAZON_SECRET_ACCESS_KEY`, `AMAZON_S3_BUCKET` environment variables. If you
+don't, these and the gem are unnecessary.
