@@ -11,6 +11,15 @@ CLEAN << 'out'
 
 directory 'out'
 
+# Site for publishing
+SITE="../edds-cloud"
+PUBLIC="public"
+SITE_PUBLIC= File.join SITE, PUBLIC
+GIT_REMOTE="heroku"
+
+##
+# Set up files from templates
+#
 FileList['src/*'].each do |f|
   output = f.pathmap('%f')
   unless f =~ /\.partial\./ || f =~ /.yaml$/
@@ -27,6 +36,9 @@ FileList['src/*'].each do |f|
 
     CLOBBER << output
     task :default => output
+    if f =~ /\.html$/
+      task :"update-site" => output
+    end
   end
 end
 
@@ -50,7 +62,20 @@ FileList['src/*.tex'].each do |f|
   end
 end
 
-task :push => [:"s3-connect"] do |t|
+task :"update-site" do |t|
+  t.prerequisites.each do |f|
+    if f=~ /html$/
+      sh "cp #{f} #{SITE_PUBLIC}"
+    end
+
+    sh %Q|git --git-dir="#{SITE}/.git" --work-tree="#{SITE}" add #{File.join(PUBLIC, f.pathmap('%f'))}|
+    sh %Q|git --git-dir="#{SITE}/.git" --work-tree="#{SITE}" commit -m 'Update documents'|
+    sh %Q|git --git-dir="#{SITE}/.git" --work-tree="#{SITE}" push #{GIT_REMOTE}|
+
+  end
+end
+
+task :push => [:"s3-connect", :"update-site"] do |t|
   t.prerequisites.each do |f|
     if f =~ /pdf$/
       puts "push #{f}"
