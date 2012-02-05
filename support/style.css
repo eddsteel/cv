@@ -1,6 +1,10 @@
 body {
-	margin: 3em;
+	margin: 3em 3em 2px 3em;
 	font-family: 'Times New Roman', 'Times', serif;
+}
+
+a img {
+	border: none;
 }
 
 section {
@@ -133,6 +137,11 @@ section.header div.url, div.other {
 section>p {
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+article footer {
+	margin: 0 auto;
+	width: 63px;
 }
 
 footer {

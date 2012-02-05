@@ -3,7 +3,7 @@
 %
 
 \documentclass[line,margin]{support/res}
-
+\usepackage[pdftex]{graphicx}
 \begin{document}
 
 \name{\Large <%=name%> \hspace{18.5em} {\footnotesize \tt <%=latex url%>}}
@@ -64,6 +64,11 @@
 
 <%end%>
 \end{list}
+
 \end{resume}
+\vspace*{\fill}
+\begin{center}
+\includegraphics[scale=0.05]{<%=footerimghuge%>}
+\end{center}
 \end{document}
 
