@@ -1,5 +1,6 @@
 body {
-	margin: 3em 3em 2px 3em;
+	margin: 3em auto 2px;
+	width : 980px;
 	font-family: 'Times New Roman', 'Times', serif;
 }
 
