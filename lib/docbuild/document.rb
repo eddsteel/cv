@@ -12,6 +12,7 @@ $LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
 require 'content'
 require 'erb'
 
+module DocBuild
 class Document
   attr_reader :template, :extension
 
@@ -59,4 +60,5 @@ class Document
       extend DocumentHelper
     end
   end
+end
 end

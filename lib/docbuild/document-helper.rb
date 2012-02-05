@@ -5,6 +5,7 @@
 # Helper methods for all document types.
 #
 
+module DocBuild
 module DocumentHelper
   def render partial, content
     Document.from_object(partial, content).result
@@ -19,4 +20,4 @@ module DocumentHelper
               "#{partial_name}.partial.#{ext}")
   end
 end
- 
+end

@@ -9,6 +9,8 @@ $:.unshift libdir unless $:.include? libdir
 
 require 'document-helper'
 
+module DocBuild
+
 module Tex
   include DocumentHelper
   ##
@@ -42,4 +44,5 @@ class LatexConvertor
       gsub(/(\S)%/, '\1\%').
       gsub(/\[([^\]]+)\]\([^)]+\)/, '{\tt \1}')
   end
+end
 end

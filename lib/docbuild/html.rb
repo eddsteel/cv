@@ -8,6 +8,7 @@ require 'document-helper'
 require 'rubygems'
 require 'rdiscount'
 
+module DocBuild
 module Html
   include DocumentHelper
   ##
@@ -22,4 +23,5 @@ module Html
       raise "Can't deal with a #{md.class}"
     end
   end
+end
 end

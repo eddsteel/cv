@@ -1,11 +1,13 @@
 require 'rake/clean'
-require 'lib/document'
+require 'lib/docbuild'
 require 'rubygems'
 begin
   require 'aws/s3'
 rescue LoadError
   puts "AWS will not be available"
 end
+
+include DocBuild
 
 CLEAN << 'out'
 

@@ -7,6 +7,8 @@
 
 require 'yaml'
 
+module DocBuild
+
 class SoftObjectFactory
   def self.build value
     if SoftObject.accepts? value
@@ -71,4 +73,6 @@ class Content < SoftObject
   def self.parse file
     new YAML.load(File.read file)
   end
+end
+
 end
