@@ -16,7 +16,7 @@ module Html
   #
   def html md
     if md.is_a? String
-      RDiscount.new(md).to_html
+      RDiscount.new(md.gsub('\LaTeX', 'LaTeX')).to_html
     elsif md.is_a? Enumerable
       render_sublist md
     else

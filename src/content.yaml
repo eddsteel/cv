@@ -22,7 +22,7 @@ skills     :
   - 'Maven, ANT, Rake.'
   - 'SSH, HTTP (and RESTful web services), SOAP.'
   - 'zsh, bash, gpg'
-  - 'HTML, CSS, LaTeX, RSS, Atom.'
+  - 'HTML, CSS, \LaTeX, RSS, Atom.'
   - 'Oracle, CouchDB, sqlite, Redis.'
   - 'Vim, IntelliJ IDEA, Eclipse.'
   - 'Perforce, git, svn.'
