@@ -51,8 +51,8 @@ end
 #
 FileList['src/*.tex'].each do |f|
   unless f =~ /\.partial\./ || f =~ /yaml$/
-    file f.pathmap('%n.pdf') => f.pathmap('out/%f') do |file|
-      sh "pdflatex -interaction batchmode #{f.pathmap('out/%f')}"
+    file f.pathmap('%n.pdf') => f.pathmap('%f') do |file|
+      sh "pdflatex -interaction batchmode #{f.pathmap('%f')}"
       sh "mv #{f.pathmap('%n')}.log out"
     end
 
