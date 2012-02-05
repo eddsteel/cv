@@ -3,6 +3,10 @@ body {
 	font-family: 'Times New Roman', 'Times', serif;
 }
 
+p {
+	line-height: 2;
+}
+
 a img {
 	border: none;
 }
@@ -84,8 +88,12 @@ ul {
 }
 
 li {
-	margin-left: 0;
+	margin: 0;
 	text-indent: -2px;
+}
+
+li p {
+	margin: 0;
 }
 
 div.address { 
@@ -147,6 +155,7 @@ article footer {
 footer {
 	text-align: right;
 	font-size: .8em;
+	margin: 2em 0 0 0;
 }
 
 footer, footer a, footer a:visited, footer a:active {
