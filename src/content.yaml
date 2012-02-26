@@ -58,7 +58,7 @@ experiences :
     dend  : '2006'
     litems:
       - 'Worked on _Filogix Express_, J2EE mortgage origination system.'
-      - 'Created and maintained build system in ANT ot build, deploy and promote.'
+      - 'Created and maintained build system in ANT to build, deploy and promote.'
       - 'Developed fixes and enhancements from support tickets and functional specifications.'
   - title: '**Consular Assistant** _British Embassy_, Brussels, Belgium'
     dstart: 'June 2006'
@@ -73,7 +73,7 @@ educations:
     date : '2007'
     litems: 
       - 'Achieved First Class Degree with Honours (top 10%).'
-      - 'Covered object-oriented design, functional programming, imperative algorithms and data structures, java, concurrency, automata, neural networks, compiler design and discrete mathematics.'
+      - 'Covered object-oriented design, functional programming, imperative algorithms and data structures, Java, concurrency, automata, neural networks, compiler design and discrete mathematics.'
       - 'Spent one year working in industry (_Filogix Inc_., Toronto).'
       - 'Completed final year project and wrote dissertation: _A Freehand, Stroke-Approximating Sketching Application for the GNOME Desktop._'
   - title: "**International Baccalaureate** _Bonn International School_, Germany"
