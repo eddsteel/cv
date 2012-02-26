@@ -153,6 +153,12 @@ article footer {
 	width: 63px;
 }
 
+article footer a {
+	display: block;
+	margin: 0 auto;
+	text-align:center;
+}
+
 footer {
 	text-align: right;
 	font-size: .8em;

@@ -70,7 +70,10 @@ task :"update-site" do |t|
       sh "cp #{f} #{SITE_PUBLIC}"
     end
 
+    sh "cp -R support #{SITE_PUBLIC}"
+
     sh %Q|git --git-dir="#{SITE}/.git" --work-tree="#{SITE}" add #{File.join(PUBLIC, f.pathmap('%f'))}|
+    sh %Q|git --git-dir="#{SITE}/.git" --work-tree="#{SITE}" add #{File.join(PUBLIC, "support")}|
     sh %Q|git --git-dir="#{SITE}/.git" --work-tree="#{SITE}" commit -m 'Update documents'|
     sh %Q|git --git-dir="#{SITE}/.git" --work-tree="#{SITE}" push #{GIT_REMOTE}|
 
