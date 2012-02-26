@@ -37,7 +37,7 @@ experiences :
     dstart: '2007'
     dend  : '2012'
     litems:
-      - 'Core member of _Detica NetReveal_ product development team, working on a highly configurable J2EE social network analysing fraud detection system (see [deticanetreveal.com](http://deticanetreveal.com)).'
+      - 'Core member of _Detica NetReveal_ product development team, working on a highly configurable J2EE social network analysing fraud detection system \\(see [deticanetreveal.com](http://deticanetreveal.com)).'
       - 'Led team of five to design and develop a graphical (swing) configuration system for a rule-based scoring engine.'
       - 'Independently designed and developed enhancements to web-based workflow system to support batch loading, and tight integration with other modules.'
       - 'Independently designed and developed Groovy-based auto-routing rules for web-based workflow system.'
