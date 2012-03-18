@@ -41,12 +41,13 @@ experiences :
       - 'Led team of five to design and develop a graphical (swing) configuration system for a rule-based scoring engine.'
       - 'Independently designed and developed enhancements to web-based workflow system to support batch loading, and tight integration with other modules.'
       - 'Independently designed and developed Groovy-based auto-routing rules for web-based workflow system.'
-      - 'Led team of three to bring product into line with legal accessibility requirements'
+      - 'Led team of three to bring product into line with legal accessibility requirements.'
       - 'Interviewed and discussed recruitment of several developers.'
       - 'Visited client sites to discuss and assist with integration with client systems.'
-      - 'Worked final ten months from home in Vancouver, independently and to schedule.'
+      - 'Worked final ten months from home in Vancouver (collaborating with Toronto office), independently and to schedule.'
       - 'Converted product from ad-hoc releases from ANT scripts to continuous integration based on Maven and Hudson (now Jenkins).'
       - 'Maintained detailed documentation and provided support to consultants to facilitate customisation and extension.'
+      - 'Provided code review, support and lots of shell scripts to colleagues.'
       - 'Product has received several industry plaudits:'
       - 
         - "2010 'Outstanding' rating, Gartner."
