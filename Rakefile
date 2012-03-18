@@ -13,6 +13,9 @@ CLEAN << 'out'
 
 directory 'out'
 
+# document content
+CONTENT='src/content.yaml'
+
 # Site for publishing
 SITE="../edds-cloud"
 PUBLIC="public"
@@ -35,6 +38,8 @@ FileList['src/*'].each do |f|
     file output => f.pathmap('out/%f') do |f|
       sh "cp #{f.prerequisites[0]} #{f.name}"
     end
+
+    file output => CONTENT
 
     CLOBBER << output
     task :default => output
